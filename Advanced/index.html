@@ -3,6 +3,7 @@
 <head>
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="movie.json" type="text/javascript" charset="utf-8"></script>
 	<title>Movie Page</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
 	<nav class="nav navbar bg-dark">
 		<button class="btn btn-light">Home</button>
 		<div class="dropdown">
-			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="movie1">
 		    Movie 1
 		  	</button>
 		  	<div class="dropdown-menu dropdown-menu-right">
@@ -24,23 +25,29 @@
 		  	</div>
 		</div>
 		<div class="dropdown">
-			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="movie2">
 		    Movie 2
 		  	</button>
 		  	<div class="dropdown-menu dropdown-menu-right">
 			    <button class="dropdown-item" type="button" id="actors">Actors</button>
-			    <button class="dropdown-item" type="button" id="plot">Plot</button>
+			    <button class="dropdown-item" type="button" id="poster">Poster</button>
 			    <button class="dropdown-item" type="button" id="plot">Plot</button>
 			    <button class="dropdown-item" type="button" id="boxOffice">Box Office</button>
 		  	</div>
 		</div>
 	</nav>
-	<ul class="nav nav-pills nav-stacked">
-	  	<li class="active"><a href="#">Home</a></li>
-	  	<li><a href="#">Menu 1</a></li>
-	  	<li><a href="#">Menu 2</a></li>
-	  	<li><a href="#">Menu 3</a></li>
-	</ul>
+	<div class="container">
+		<div class="row">
+			<div class="nav flex-column col-md-2 nav-pills bg-light" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Actors</a>
+					<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Poster</a>
+					<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Plot</a>
+					<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Box Office</a>
+			</div>
+			<div class="movie-card card col-md-10 ml-auto content">
+			</div>
+		</div>
+	</div>
 </main>
 <script
   src="https://code.jquery.com/jquery-3.4.1.js"
